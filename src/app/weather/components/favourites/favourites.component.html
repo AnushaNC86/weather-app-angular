@@ -1,0 +1,67 @@
+{{ refresh() }}
+<div class="favContainer">
+  <div class="headData" *ngIf="favData.length > 0">
+    <div class="totalFav">
+      {{ favData.length }}
+      {{
+        favData.length === 1
+          ? "city added as favourite"
+          : "cities added as favourite"
+      }}
+    </div>
+    <div class="removeall" (click)="showDialog()">Remove All</div>
+  </div>
+  <p-dialog
+    header=" Are you sure want to remove all the favourites?"
+    [(visible)]="visible"
+    [modal]="true"
+    [draggable]="false"
+    [closable]="false"
+    [resizable]="false"
+  >
+    <div class="buttonmodal">
+      <div class="btnmodalout">
+        <button
+          style="
+            background-color: #ffffff;
+            outline: none;
+            border: none;
+            width: 50px;
+            color: #000000;
+            font-family: Roboto;
+            font-size: 15px;
+            font-weight: 500;
+          "
+        >
+          NO
+        </button>
+
+        <button class="modalbtn">YES</button>
+      </div>
+    </div>
+  </p-dialog>
+  <div class="favContents" *ngIf="favData.length > 0">
+    <div class="favData" *ngFor="let data of favData">
+      <div class="favLocation">{{ data.name }}</div>
+      <div class="weatherData">
+        <img
+          src="../../../../assets/images/icon_mostly_cloudy_small.png"
+          alt=""
+        />
+        <div class="weatherDeg">
+          {{ data.main.temp | number : "1.0-0" }}&deg;C
+        </div>
+        <div class="weatherDesc">
+          {{ data.weather[0].description }}
+        </div>
+      </div>
+
+      <i class="pi pi-heart-fill favImg" (click)="removeFavourites(data)"></i>
+    </div>
+  </div>
+
+  <div class="nodata" *ngIf="favData.length <= 0">
+    <img src="../../../../assets/images/icon_nothing.png" class="noDataImg" />
+    <div class="nofav">No Favourites added</div>
+  </div>
+</div>

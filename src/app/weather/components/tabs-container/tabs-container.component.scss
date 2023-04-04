@@ -1,0 +1,42 @@
+.tabsContainer {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+  // padding: 0px 10px;
+  border-bottom: 1px solid #ffffff5e;
+  .tabsList {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    .tabs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-family: Roboto;
+      font-size: 13px;
+      letter-spacing: 0;
+      line-height: 15px;
+      text-transform: uppercase;
+      width: 80px;
+      cursor: pointer;
+      text-decoration: none;
+      padding-bottom: 10px;
+    }
+    .active {
+      color: #ffd639;
+      border-bottom: 2px solid #ffd639;
+    }
+  }
+
+  .dateInfo {
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 16px;
+    text-align: right;
+  }
+}

@@ -1,0 +1,21 @@
+<div class="tabsContainer">
+  <div class="tabsList">
+    <div
+      [routerLink]="['/']"
+      class="tabs"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Home
+    </div>
+    <div [routerLink]="['favourite']" class="tabs" routerLinkActive="active">
+      Favourites
+    </div>
+    <div [routerLink]="['recents']" class="tabs" routerLinkActive="active">
+      Recents
+    </div>
+  </div>
+  <div class="dateInfo">
+    {{ Date | date : "fullDate" }} {{ Date | date : "shortTime" }}
+  </div>
+</div>

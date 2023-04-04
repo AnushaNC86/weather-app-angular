@@ -1,0 +1,41 @@
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  gap: 50px;
+  padding: 33px 0px;
+
+  font-family: Roboto;
+  font-size: 16px;
+
+  .headerTop {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    .textField {
+      position: relative;
+      .searchField {
+        padding: 15px 10px;
+        width: 458px;
+        outline: none;
+        border: 1px solid #ffffff3d;
+        border-radius: 3px;
+        background-color: rgb(255 255 255 / 30%);
+        color: #ffffff;
+        font-family: Roboto;
+        font-size: 16px;
+      }
+      ::placeholder {
+        color: #ffffff;
+      }
+      .searchIcn {
+        position: absolute;
+        top: 17px;
+        color: white;
+        right: 12px;
+      }
+    }
+  }
+}

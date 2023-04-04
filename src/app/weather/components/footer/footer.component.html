@@ -1,0 +1,47 @@
+{{ refreshData() }}
+<div class="footerContainer">
+  <div class="minMax">
+    <img src="../../../../assets/images/icon_temperature_info.png" alt="" />
+    <div class="minMaxDesc">
+      <div class="minMaxHead">Min-Max</div>
+      <div class="minMaxTemp">
+        {{ dataFromServer.main.temp_min | number : "1.0-0" }}&deg; -
+        {{ dataFromServer.main.temp_max | number : "1.0-0" }}&deg;
+      </div>
+    </div>
+  </div>
+  <div class="minMax">
+    <img src="../../../../assets/images/icon_precipitation_info.png" alt="" />
+    <div class="minMaxDesc">
+      <div class="minMaxHead">Precipitation</div>
+      <div class="minMaxTemp">
+        {{ dataFromServer.main.pressure - 5 }} -
+        {{ dataFromServer.main.pressure + 5 }}
+      </div>
+    </div>
+  </div>
+  <div class="minMax">
+    <img src="../../../../assets/images/icon_humidity_info.png" alt="" />
+    <div class="minMaxDesc">
+      <div class="minMaxHead">Humidity</div>
+      <div class="minMaxTemp">76-79</div>
+    </div>
+  </div>
+  <div class="minMax">
+    <img src="../../../../assets/images/icon_wind_info.png" alt="" />
+    <div class="minMaxDesc">
+      <div class="minMaxHead">Wind</div>
+      <div class="minMaxTemp">
+        {{ dataFromServer.wind.speed - 1 }} -
+        {{ dataFromServer.wind.speed + 1 }}
+      </div>
+    </div>
+  </div>
+  <div class="minMax">
+    <img src="../../../../assets/images/icon_visibility_info.png" alt="" />
+    <div class="minMaxDesc">
+      <div class="minMaxHead">Visibility</div>
+      <div class="minMaxTemp">{{ dataFromServer.visibility }}</div>
+    </div>
+  </div>
+</div>

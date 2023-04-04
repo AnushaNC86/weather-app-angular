@@ -1,0 +1,38 @@
+{{ onRefreshData() }}
+<div class="favContainer">
+  <div class="headData" *ngIf="recentOrders.length > 0">
+    <div class="totalFav">
+      {{ recentOrders.length }} cities added as favourite
+    </div>
+    <div class="removeall">Remove All</div>
+  </div>
+  <div class="favContents" *ngIf="recentOrders.length > 0">
+    <div class="favData" *ngFor="let data of recentOrders">
+      <div class="favLocation">{{ data.name }}</div>
+      <div class="weatherData">
+        <img
+          src="../../../../assets/images/icon_mostly_cloudy_small.png"
+          alt=""
+        />
+        <div class="weatherDeg">
+          {{ data.main.temp | number : "1.0-0" }}&deg;C
+        </div>
+        <div class="weatherDesc">{{ data.weather[0].description }}</div>
+      </div>
+      <i
+        class="pi pi-heart-fill favImg"
+        *ngIf="favHeart[data.id] === true"
+        (click)="removeFavs(data)"
+      ></i>
+      <i
+        class="pi pi-heart favImgNofill"
+        *ngIf="favHeart[data.id] !== true"
+        (click)="addFavs(data)"
+      ></i>
+    </div>
+  </div>
+  <div class="nodata" *ngIf="recentData.length === 0">
+    <img src="../../../../assets/images/icon_nothing.png" class="noDataImg" />
+    <div class="nofav">No Recents added</div>
+  </div>
+</div>

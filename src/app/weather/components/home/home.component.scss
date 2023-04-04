@@ -1,0 +1,58 @@
+.homecontainer {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  color: white;
+
+  .cityName {
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 24px;
+    margin-bottom: 15px;
+  }
+  .addToFav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    .favImg {
+      font-size: 18px;
+      cursor: pointer;
+    }
+    .favImgFill {
+      font-size: 18px;
+      cursor: pointer;
+      color: #ffd639;
+    }
+  }
+  .weatherDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 5%;
+    .temp {
+      font-size: 64px;
+      font-weight: 500;
+      margin-bottom: 10px;
+      line-height: 75px;
+      display: flex;
+      align-items: flex-end;
+      .degree {
+        font-size: 24px;
+      }
+    }
+    .description {
+      font-size: 22px;
+      text-transform: capitalize;
+    }
+    img.weatherImg {
+      width: 85px;
+    }
+  }
+}

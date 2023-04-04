@@ -1,0 +1,17 @@
+<div class="headerContainer">
+  <div class="headerTop">
+    <img class="logoImg" src="../../../../assets/images/logo_web.png" />
+    <form class="textField" (submit)="onSubmit()">
+      <input
+        type="text"
+        class="searchField"
+        name="search"
+        id="search"
+        placeholder="Search City"
+        [(ngModel)]="search"
+      />
+      <i class="pi pi-search searchIcn"></i>
+    </form>
+  </div>
+  <app-tabs-container></app-tabs-container>
+</div>

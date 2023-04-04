@@ -1,0 +1,24 @@
+.footerContainer {
+  position: fixed;
+  bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+  padding: 40px 3px;
+  border-top: 1px solid #ffffff57;
+  .minMax {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    img {
+      height: 32px;
+    }
+    .minMaxDesc {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+}

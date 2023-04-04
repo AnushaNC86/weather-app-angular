@@ -1,0 +1,34 @@
+{{ dataRefresh() }}
+<div class="homecontainer">
+  <div class="cityName">
+    {{ this.dataFromServer && dataFromServer.name }}
+  </div>
+  <div class="addToFav">
+    <i
+      class="pi pi-heart favImg"
+      *ngIf="!favHeart"
+      (click)="addFav(dataFromServer)"
+    ></i>
+    <i
+      class="pi pi-heart-fill favImgFill"
+      *ngIf="favHeart"
+      (click)="removeFav(dataFromServer)"
+    ></i>
+
+    <div [ngClass]="!favHeart ? 'addToFav' : 'favImgFill'">
+      {{ !favHeart ? "Add to favourite" : "Added to favourites" }}
+    </div>
+  </div>
+  <div class="weatherDetails">
+    <img class="weatherImg" src="{{ iconUrl }}" alt="img" />
+
+    <div class="temp">
+      {{ dataFromServer.main.temp | number : "1.0-0"
+      }}<span class="degree">&deg; C</span>
+    </div>
+    <div class="description">
+      {{ dataFromServer.weather[0].description }}
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>
