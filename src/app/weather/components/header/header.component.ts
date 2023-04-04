@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  search: string = '';
+  search: string = 'udupi';
   cityName: string = '';
   weatherData: any = [];
   recentData: any = [];

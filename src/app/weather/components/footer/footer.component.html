@@ -15,8 +15,8 @@
     <div class="minMaxDesc">
       <div class="minMaxHead">Precipitation</div>
       <div class="minMaxTemp">
-        {{ dataFromServer.main.pressure - 5 }} -
-        {{ dataFromServer.main.pressure + 5 }}
+        {{ dataFromServer.main.pressure - 5 | number : "1.0-0" }} -
+        {{ dataFromServer.main.pressure + 5 | number : "1.0-0" }}
       </div>
     </div>
   </div>
@@ -32,8 +32,8 @@
     <div class="minMaxDesc">
       <div class="minMaxHead">Wind</div>
       <div class="minMaxTemp">
-        {{ dataFromServer.wind.speed - 1 }} -
-        {{ dataFromServer.wind.speed + 1 }}
+        {{ dataFromServer.wind.speed - 1 | number : "1.0-0" }} -
+        {{ dataFromServer.wind.speed + 1 | number : "1.0-0" }}
       </div>
     </div>
   </div>

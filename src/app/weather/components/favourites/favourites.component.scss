@@ -41,9 +41,9 @@
       color: #ffd639;
       cursor: pointer;
     }
-    .removeall {
-      cursor: pointer;
-    }
+  }
+  .removeall {
+    cursor: pointer;
   }
   .nodata {
     display: flex;
@@ -63,7 +63,36 @@
       text-align: center;
     }
   }
-  .pi-times:before {
-    content: "";
+
+  .buttonmodal {
+    display: flex;
+    margin: 61px 10px 0 0;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 20px;
+
+    .noBtn {
+      background-color: rgba(29, 10, 10, 0.226);
+      outline: none;
+      border: none;
+      cursor: pointer;
+      color: #000000;
+      font-family: Roboto;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 10px 31px;
+      font-family: 400;
+      font-size: 15px;
+    }
+    button.modalbtn {
+      outline: none;
+      border: none;
+      cursor: pointer;
+      padding: 10px 31px;
+      background-color: #f76b1c;
+      color: #ffffff;
+      font-family: 400;
+      font-size: 15px;
+    }
   }
 }

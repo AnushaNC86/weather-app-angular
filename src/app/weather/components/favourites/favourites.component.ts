@@ -24,4 +24,13 @@ export class FavouritesComponent {
   showDialog() {
     this.visible = true;
   }
+  closeModal(data: boolean) {
+    // data ? (this.visible = false) : (this.visible = true);
+    if (!data) {
+      localStorage.removeItem('favourits');
+      this.visible = false;
+    } else {
+      this.visible = false;
+    }
+  }
 }

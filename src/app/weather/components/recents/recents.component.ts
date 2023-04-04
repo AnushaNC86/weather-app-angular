@@ -20,6 +20,7 @@ export class RecentsComponent {
   ids: any = [];
   favDataFound: boolean = false;
   recentOrders: any = [];
+  visible: boolean = false;
 
   constructor(private weatherService: ServicesService) {}
 
@@ -64,5 +65,17 @@ export class RecentsComponent {
     this.favHeart[datas.id] = false;
     this.favData = this.favData.filter((data: any) => data.id !== datas.id);
     localStorage.setItem('favourits', JSON.stringify(this.favData));
+  }
+  showDialog() {
+    this.visible = true;
+  }
+  closeModal(data: boolean) {
+    // data ? (this.visible = false) : (this.visible = true);
+    if (!data) {
+      localStorage.removeItem('recentSearches');
+      this.visible = false;
+    } else {
+      this.visible = false;
+    }
   }
 }
